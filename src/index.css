@@ -1,0 +1,579 @@
+/* Navbar Section */
+.call-btn {
+  border: 2px solid #ffffff;
+  transition: 0.3s ease;
+}
+
+.call-btn:hover {
+  background-color: #ffffff;
+  color: #000000 !important;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  transform: translateY(-2px);
+}
+
+.custom-offcanvas {
+  width: 250px;
+  /* set menu width */
+  background-color: #111 !important;
+}
+
+.custom-offcanvas .nav-link {
+  color: white;
+  font-size: 18px;
+}
+
+.custom-offcanvas .nav-link:hover {
+  color: #0d6efd;
+}
+
+
+
+/* Body.jsx section */
+.circle-wrapper {
+  width: 100%;
+  max-width: 400px;
+  /* circle ka max size */
+  aspect-ratio: 1/1;
+  /* height = width automatically (perfect circle) */
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  /* margin-right: auto; */
+}
+
+.circle-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* image circle me fit hogi */
+}
+
+
+#bd_txt {
+  padding-top: 10vh;
+}
+
+.body_text {
+  font-size: 55px;
+}
+
+.sc_logo {
+  padding-top: 20vh;
+}
+
+#bodydiv {
+  background-color: beige;
+}
+
+.chat-btn {
+  background-color: #25D366 !important;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  transition: 0.3s ease;
+}
+
+.chat-btn:hover {
+  background-color: #1ebe5d !important;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Services section CSS */
+.services-section {
+  background-color: #111418;
+  color: white;
+  /* padding: 40px 0; */
+  text-align: center;
+}
+
+.services-section .section-title {
+  font-size: 40px;
+  margin-bottom: 40px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.services-section .service-item {
+  max-width: 340px;
+  margin: 0 auto 40px auto;
+  background: #161a1d;
+  padding: 35px 25px;
+  border-radius: 10px;
+  transition: 0.3s;
+  border: 1px solid #222;
+}
+
+.services-section .service-item:hover {
+  transform: translateY(-10px);
+  border-color: #ffcc00;
+  box-shadow: 0px 4px 18px rgba(255, 204, 0, 0.1);
+  cursor: pointer;
+}
+
+.services-section .service-item {
+  max-width: 340px;
+  margin: 0 auto 40px auto;
+  background: #161a1d;
+  padding: 0;
+  /* <-- padding removed */
+  border-radius: 10px;
+  transition: 0.3s;
+  border: 1px solid #222;
+  overflow: hidden;
+  /* <-- image neatly set to edge*/
+}
+
+/* Image edge fix */
+.services-section .service-item img {
+  width: 100%;
+  height: 180px;
+  /* Fixed height so image banner style dikhe */
+  object-fit: cover;
+  /* Image crop nahi, perfect fit */
+  display: block;
+  margin: 0;
+}
+
+/* Card content wrapper (spacing maintain) */
+.service-content {
+  padding: 15px;
+  /* <-- bottom content spacing remain safe  */
+}
+
+
+/* Base h3 styling */
+.services-section .service-item h3 {
+  position: relative;
+  display: inline-block;
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #ffcc00;
+  cursor: default;
+  padding-bottom: 5px;
+  padding-top: 20px;
+}
+
+/* Wave underline (initially hidden) */
+.services-section .service-item h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 3px;
+
+  background: url("data:image/svg+xml;utf8,<svg width='100' height='4' xmlns='http://www.w3.org/2000/svg'><path d='M0 2 Q 25 0 50 2 T 100 2' stroke='%23ffcc00' stroke-width='3' fill='transparent'/></svg>");
+  background-size: 200% 100%;
+  background-repeat: repeat-x;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease-out;
+}
+
+/* NOW CARD HOVER triggers animation */
+.services-section .service-item:hover h3::after {
+  transform: scaleX(1);
+  animation: waveMove 0.6s linear infinite;
+}
+
+/* Wave moving animation */
+@keyframes waveMove {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 100px 0;
+  }
+}
+
+.services-section .service-item p {
+  font-size: 15px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+
+/* Placeholder in contact page */
+::placeholder {
+  color: #6c757d !important;
+  /* bootstrap muted */
+  opacity: 1;
+  /* ensure visibility */
+}
+
+
+/* Technical skills section */
+.skill-box {
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.skill-box:hover {
+  transform: scale(1.05);
+  /* background: #222; */
+  border-color: #ffdd55;
+  cursor: pointer;
+}
+
+#skills {
+  background-color: beige;
+  letter-spacing: 2px;
+}
+
+.Headings {
+  font-size: 40px;
+  margin-bottom: 0px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+
+.container_icons {
+  width: 40vw;
+  /* margin-left: 50vw; */
+  /* margin-right: 50vw; */
+}
+
+.col-lg-5th {
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  justify-content: center;
+  gap: 12px;
+}
+
+/* Project section */
+#projects {
+  background-color: beige;
+}
+
+.project-image {
+  width: 360px;
+  height: 180px;
+  /* Equal height for all images (adjustable) */
+  object-fit: contain;
+  /* Crop extra part, maintain center */
+  border-radius: 15px 15px 0 0;
+  /* Optional */
+  background-color: black;
+}
+
+.project-card {
+  transition: all 0.3s ease;
+  border: 4px solid black;
+  border-radius: 10px !important;
+  /* smooth round corners */
+  overflow: hidden;
+  /* image overflow fix */
+}
+
+/* Hover effect */
+.project-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  /* pop-up effect */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+  /* deep shadow */
+  cursor: pointer;
+}
+
+.project-card img {
+  transition: 0.4s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.08);
+}
+
+.justify-txt {
+  text-align: justify;
+}
+
+
+/* Experience.jsx section CSS */
+.experience-card {
+  transition: 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(255, 193, 7, 0.3);
+}
+
+
+/* Footer CSS */
+.copyright {
+  font-size: 13px;
+}
+
+
+
+
+
+
+
+
+
+/* Media queries  */
+
+/* 768px and above: override col-md-4 width */
+@media (min-width: 768px) {
+  .services-section .card_update {
+    flex: 0 0 33.3333%;
+    max-width: 25.3333%;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  #bd_txt {
+    padding-top: 0 !important;
+
+  }
+
+  .body_text {
+    font-size: 35px;
+  }
+
+  #bd_txt p {
+    font-size: 15px;
+  }
+
+}
+
+/* services ke icons ke liy */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    /* Mobile: 2 per row */
+  }
+}
+
+/* Technical section grid */
+@media(min-width: 992px) {
+  .skills-grid {
+    grid-template-columns: repeat(6, 1fr);
+    /* EXACT 5 per row */
+  }
+}
+
+
+/* ========================================================= */
+/* 🔥 ADD-ON ANIMATIONS & VFX (FIXED – NO OVERFLOW) */
+/* ========================================================= */
+
+/* Prevent horizontal scroll ONLY for hero */
+#bodydiv {
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ---- Hero background subtle motion glow (SAFE) ---- */
+#bodydiv::after {
+  content: "";
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(37, 117, 252, 0.35), transparent 70%);
+  filter: blur(120px);
+
+  /* Center-based positioning (NO overflow) */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  animation: floatBgSafe 8s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes floatBgSafe {
+  from {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+
+  to {
+    transform: translate(-50%, -50%) translateY(-60px);
+  }
+}
+
+/* Ensure content stays above VFX */
+#bodydiv>* {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---- Profile image glow (unchanged behavior, safe) ---- */
+.neon-glow {
+  box-shadow: 0 0 30px rgba(106, 17, 203, 0.55);
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 28px rgba(106, 17, 203, 0.45);
+  }
+
+  50% {
+    box-shadow: 0 0 45px rgba(106, 17, 203, 0.7);
+  }
+
+  100% {
+    box-shadow: 0 0 28px rgba(106, 17, 203, 0.45);
+  }
+}
+
+/* ---- WhatsApp button breathing (SAFE – no layout shift) ---- */
+.chat-btn {
+  animation: breatheBtn 3s ease-in-out infinite;
+}
+
+@keyframes breatheBtn {
+  0% {
+    box-shadow: 0 0 0 rgba(37, 211, 102, 0);
+  }
+
+  50% {
+    box-shadow: 0 0 16px rgba(37, 211, 102, 0.55);
+  }
+
+  100% {
+    box-shadow: 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* ---- Mobile safety ---- */
+@media (max-width: 768px) {
+  #bodydiv::after {
+    animation: none;
+  }
+
+  .neon-glow {
+    animation: none;
+    box-shadow: 0 0 22px rgba(106, 17, 203, 0.45);
+  }
+
+  .chat-btn {
+    animation: none;
+  }
+}
+
+/* CSS for the Footer logo */
+
+/* ===================================== */
+/* 🔥 FOOTER CURSOR FOLLOW NEON GLOW */
+/* ===================================== */
+
+.footer-area {
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-cursor-glow {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle,
+      rgba(97, 219, 251, 0.45),
+      transparent 70%);
+  filter: blur(30px);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: 0;
+}
+
+/* Keep content above glow */
+.footer-area>*:not(.footer-cursor-glow) {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===================================== */
+/* 🌊 FLOATING SOCIAL ICONS */
+/* ===================================== */
+
+.footer-float {
+  display: inline-flex;
+  animation: floatIcon 3s ease-in-out infinite;
+}
+
+.footer-float:hover {
+  transform: scale(1.15);
+}
+
+@keyframes floatIcon {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Stagger delays */
+.delay-1 {
+  animation-delay: 0s;
+}
+
+.delay-2 {
+  animation-delay: 0.3s;
+}
+
+.delay-3 {
+  animation-delay: 0.6s;
+}
+
+.delay-4 {
+  animation-delay: 0.9s;
+}
+
+.delay-5 {
+  animation-delay: 1.2s;
+}
+
+/* ===================================== */
+/* ⚛️ REACT ICON SOFT SPIN */
+/* ===================================== */
+
+.react-spin {
+  animation: reactSpin 8s linear infinite;
+}
+
+@keyframes reactSpin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Disable animations on mobile */
+@media (max-width: 768px) {
+
+  .footer-cursor-glow,
+  .footer-float,
+  .react-spin {
+    animation: none;
+  }
+}
