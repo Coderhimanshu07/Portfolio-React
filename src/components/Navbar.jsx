@@ -104,7 +104,7 @@ function Navbar() {
                                 <li className="nav-item"><Link className="nav-link" to="/">About</Link></li>
                                 <li className="nav-item"><Link className="nav-link" to="/Services">Services</Link></li>
                                 <li className="nav-item"><Link className="nav-link" to="/Technical_skills">Technical Skills</Link></li>
-                                <li className="nav-item"><Link className="nav-link" to="/Projects">Projects</Link></li>
+                                <li className="nav-item"><Link className="nav-link" to="/project">Projects</Link></li>
                                 <li className="nav-item"><Link className="nav-link" to="/Experience">Experience</Link></li>
                                 <li className="nav-item"><Link className="nav-link" to="/Contact">Contact</Link></li>
                             </ul>
