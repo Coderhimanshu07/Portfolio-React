@@ -13,7 +13,7 @@ import CAi from "../assets/CAi-new.webp";
 import Watch from "../assets/Watch.png";
 import sangeet from "../assets/Sangeet_web.webp";
 import dog from "../assets/dog.png";
-import weather from "../assets/whether.png";
+import weather from "../assets/Whether.png";
 
 const projects = [
   {
