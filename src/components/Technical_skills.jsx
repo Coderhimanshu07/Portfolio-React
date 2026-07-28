@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { FaWindows, FaAws, FaCloud, FaJava, FaTerminal } from "react-icons/fa";
 import manus from "../assets/manus.png";
 import python from "../assets/py-logo.png";
+import antigravity from "../assets/antigravity.png";
 
 import {
   SiHtml5,
@@ -38,9 +39,16 @@ import {
   SiGooglecloud,
   SiRazorpay,
   SiVite,
-  SiStripe,
-  SiPaypal
+  SiStripe
 } from "react-icons/si";
+
+const AntigravityIcon = ({ size = 38 }) => (
+  <img
+    src={antigravity}
+    alt="Google Antigravity"
+    style={{ width: `${size}px`, height: `${size}px`, objectFit: "contain" }}
+  />
+);
 
 const SupabaseIcon = ({ size = 45 }) => (
   <svg width={size} height={size} viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
@@ -62,10 +70,10 @@ const GoogleCloudIcon = ({ size = 45 }) => (
 const TechnicalSkills = () => {
   const skills = [
     // Languages
-    { name: "HTML", icon: <SiHtml5 size={45} color="#E34F26" /> },
-    { name: "CSS", icon: <SiCss3 size={45} color="#1572B6" /> },
-    { name: "JavaScript", icon: <SiJavascript size={45} color="#F7DF1E" /> },
-    { name: "PHP", icon: <SiPhp size={45} color="#777BB4" /> },
+    { name: "HTML", icon: <SiHtml5 size={38} color="#E34F26" /> },
+    { name: "CSS", icon: <SiCss3 size={38} color="#1572B6" /> },
+    { name: "JavaScript", icon: <SiJavascript size={38} color="#F7DF1E" /> },
+    { name: "PHP", icon: <SiPhp size={38} color="#777BB4" /> },
     {
       name: "Python",
       icon: (
@@ -73,53 +81,53 @@ const TechnicalSkills = () => {
           src={python}
           alt="Python"
           className="img-fluid"
-          style={{ width: "45px", height: "45px", objectFit: "contain" }}
+          style={{ width: "38px", height: "38px", objectFit: "contain" }}
         />
       )
     },
-    { name: "C Language", icon: <SiC size={45} color="#A8B9CC" /> },
-    { name: "C++", icon: <SiCplusplus size={45} color="#00599C" /> },
-    { name: "Java", icon: <FaJava size={45} color="#F89820" /> },
+    { name: "C ", icon: <SiC size={38} color="#A8B9CC" /> },
+    { name: "C++", icon: <SiCplusplus size={38} color="#00599C" /> },
+    { name: "Java", icon: <FaJava size={38} color="#F89820" /> },
 
     // Frontend Frameworks
-    { name: "Bootstrap", icon: <SiBootstrap size={45} color="#7952B3" /> },
-    { name: "TailwindCSS", icon: <SiTailwindcss size={45} color="#06B6D4" /> },
-    { name: "jQuery", icon: <SiJquery size={45} color="#0769AD" /> },
-    { name: "React.js", icon: <SiReact size={45} color="#61DAFB" /> },
-    { name: "Next.js", icon: <SiNextdotjs size={45} /> },
-    { name: "Redux", icon: <SiRedux size={45} color="#764ABC" /> },
-    { name: "Vite", icon: <SiVite size={45} color="#646CFF" /> },
+    { name: "Bootstrap", icon: <SiBootstrap size={38} color="#7952B3" /> },
+    { name: "Tailwind", icon: <SiTailwindcss size={38} color="#06B6D4" /> },
+    { name: "jQuery", icon: <SiJquery size={38} color="#0769AD" /> },
+    { name: "React.js", icon: <SiReact size={38} color="#61DAFB" /> },
+    { name: "Next.js", icon: <SiNextdotjs size={38} /> },
+    { name: "Redux", icon: <SiRedux size={38} color="#764ABC" /> },
+    { name: "Vite", icon: <SiVite size={38} color="#646CFF" /> },
 
     // Backend
-    { name: "Node.js", icon: <SiNodedotjs size={45} color="#339933" /> },
-    { name: "Apache", icon: <SiApache size={45} color="#D22128" /> },
-    { name: "MongoDB", icon: <SiMongodb size={45} color="#47A248" /> },
-    { name: "MySQL", icon: <SiMysql size={55} color="#4479A1" /> },
-    { name: "Supabase", icon: <SupabaseIcon size={45} /> },
+    { name: "Node.js", icon: <SiNodedotjs size={38} color="#339933" /> },
+    { name: "Apache", icon: <SiApache size={38} color="#D22128" /> },
+    { name: "MongoDB", icon: <SiMongodb size={38} color="#47A248" /> },
+    { name: "MySQL", icon: <SiMysql size={38} color="#4479A1" /> },
+    { name: "Supabase", icon: <SupabaseIcon size={38} /> },
 
     // Backend Frameworks
-    { name: "Express.js", icon: <SiExpress size={45} color="#ffffff" /> },
+    { name: "Express.js", icon: <SiExpress size={38} color="#ffffff" /> },
 
     // Payment Gateways
-    { name: "Razorpay", icon: <SiRazorpay size={45} color="#3395FF" /> },
-    { name: "Stripe", icon: <SiStripe size={45} color="#635BFF" /> },
-    { name: "PayPal", icon: <SiPaypal size={45} color="#00457C" /> },
+    { name: "Razorpay", icon: <SiRazorpay size={38} color="#3395FF" /> },
+    { name: "Stripe", icon: <SiStripe size={38} color="#635BFF" /> },
 
     // Cloud & DevOps
-    { name: "AWS", icon: <FaAws size={45} color="#FF9900" /> },
-    { name: "SaaS", icon: <FaCloud size={45} color="#0D6EFD" /> },
-    { name: "G Cloud", icon: <GoogleCloudIcon size={45} /> },
+    { name: "AWS", icon: <FaAws size={38} color="#FF9900" /> },
+    { name: "SaaS", icon: <FaCloud size={38} color="#0D6EFD" /> },
+    { name: "G Cloud", icon: <GoogleCloudIcon size={38} /> },
     { name: "Git", icon: <SiGit size={45} color="#F05032" /> },
-    { name: "GitHub", icon: <SiGithub size={45} color="#ffffff" /> },
-    { name: "Linux", icon: <SiLinux size={45} color="#FCC624" /> },
+    { name: "GitHub", icon: <SiGithub size={38} color="#ffffff" /> },
+    { name: "Linux", icon: <SiLinux size={38} color="#FCC624" /> },
 
     // AI Tools
-    { name: "ChatGPT", icon: <SiOpenai size={45} color="#10A37F" /> },
-    { name: "Gemini", icon: <SiGooglegemini size={45} color="#4285F4" /> },
-    { name: "Perplexity", icon: <SiPerplexity size={45} color="#FFF" /> },
-    { name: "Claude Code", icon: <SiClaude size={45} color="#D97757" /> },
-    { name: "Copilot", icon: <SiGithubcopilot size={45} color="#ffffff" /> },
-    { name: "OpenCode", icon: <FaTerminal size={45} color="#00C853" /> }, ,
+    { name: "ChatGPT", icon: <SiOpenai size={38} color="#10A37F" /> },
+    { name: "Gemini", icon: <SiGooglegemini size={38} color="#4285F4" /> },
+    { name: "Perplexity", icon: <SiPerplexity size={38} color="#FFF" /> },
+    { name: "Claude", icon: <SiClaude size={38} color="#D97757" /> },
+    { name: "Copilot", icon: <SiGithubcopilot size={38} color="#ffffff" /> },
+    { name: "OpenCode", icon: <FaTerminal size={38} color="#00C853" /> },
+    { name: "Antigravity", icon: <AntigravityIcon size={30} /> },
   ];
 
   return (
@@ -164,10 +172,10 @@ const TechnicalSkills = () => {
               whileHover={{ scale: 1.08 }}
             >
               <div
-                className="skill-box bg-dark p-2 text-center rounded border border-warning"
-                style={{ width: "130px" }}
+                className="skill-box bg-dark p-1 text-center rounded border border-warning"
+                style={{ width: "100px" }}
               >
-                <div style={{ fontSize: "35px" }}>{skill.icon}</div>
+                <div style={{ fontSize: "35px", lineHeight: "1" }}>{skill.icon}</div>
                 <p className="mt-2 mb-0">{skill.name}</p>
               </div>
             </motion.div>

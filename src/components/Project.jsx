@@ -49,22 +49,7 @@ const projects = [
     liveLink: "https://coderhimanshu07.github.io/stopwatch/",
     repoLink: "https://github.com/Coderhimanshu07/stopwatch",
   },
-  {
-    title: "Dog Breed Explorer",
-    description:
-      "Dog Breed Explorer is a web application that allows users to search and discover different dog breeds. It provides detailed information about each breed, including characteristics, temperaments, and care requirements. Built with React.js for a modern, responsive user experience.",
-    imageUrl: dog,
-    liveLink: "https://coderhimanshu07.github.io/Dog-Breed-Explorer/",
-    repoLink: "https://github.com/Coderhimanshu07/Dog-Breed-Explorer",
-  },
-  {
-    title: "Weather App",
-    description:
-      "Weather App is a web application that provides real-time weather information for any location. Users can search for cities and view current weather conditions, temperature, humidity, and forecasts. it offers a clean, responsive interface for an optimal user experience.",
-    imageUrl: weather,
-    liveLink: "https://coderhimanshu07.github.io/Weather-App/",
-    repoLink: "https://github.com/Coderhimanshu07/Weather-App",
-  },
+
   {
     title: "Portfolio",
     description:
@@ -83,14 +68,6 @@ const projects = [
     repoLink: "https://github.com/Coderhimanshu07/Birthday-surprise",
   },
 
-  {
-    title: "Employee Search System",
-    description:
-      "Responsive employee search application developed using HTML, Bootstrap 5, and JavaScript. Allows users to search employees by name or ID with instant results. Offers clean interface and smooth user experience for easy navigation.",
-    imageUrl: Employee,
-    liveLink: "https://coderhimanshu07.github.io/Projects-emp-search-system/",
-    repoLink: "https://github.com/Coderhimanshu07/Projects-emp-search-system",
-  },
 ];
 
 const Projects = () => {
