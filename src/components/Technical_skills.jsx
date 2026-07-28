@@ -176,7 +176,7 @@ const TechnicalSkills = () => {
                 style={{ width: "100px" }}
               >
                 <div style={{ fontSize: "35px", lineHeight: "1" }}>{skill.icon}</div>
-                <p className="mt-2 mb-0">{skill.name}</p>
+                <p className="mt-1 mb-0" style={{ fontSize: "11px" }}>{skill.name}</p>
               </div>
             </motion.div>
           ))}
