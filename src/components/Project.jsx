@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import as from "../assets/As_logo.webp";
+import as from "../assets/AS_logo.webp";
 import Calculator from "../assets/cal.png";
 import todo from "../assets/Todo.png";
 import portfolio from "../assets/Portfolio2.png";
