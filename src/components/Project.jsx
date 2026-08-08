@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+import as from "../assets/As_logo.webp";
 import Calculator from "../assets/cal.png";
 import todo from "../assets/Todo.png";
 import portfolio from "../assets/Portfolio2.png";
@@ -34,39 +35,39 @@ const projects = [
   }
   ,
   {
-    title: "E-commerce",
+    title: "E-commerce Store",
     description:
       "E-commerce web application built with React.js featuring clean, responsive user interface with smooth navigation. Showcases modern front-end development practices using reusable components. Delivers simple, user-friendly online shopping experience optimized for performance.",
-    imageUrl: Ecom,
+    imageUrl: as,
     liveLink: "https://ecommerce-react-xi-sandy.vercel.app/",
     repoLink: "https://github.com/Coderhimanshu07/ecommerce-react",
   },
-  {
-    title: "Neon Stopwatch",
-    description:
-      "Interactive stopwatch web application built with HTML, CSS, and JavaScript. Allows users to start, stop, and reset time tracking with hours, minutes, seconds display. Focuses on simplicity, responsive design, and smooth real-time interaction across devices.",
-    imageUrl: Watch,
-    liveLink: "https://coderhimanshu07.github.io/stopwatch/",
-    repoLink: "https://github.com/Coderhimanshu07/stopwatch",
-  },
+  // {
+  //   title: "Neon Stopwatch",
+  //   description:
+  //     "Interactive stopwatch web application built with HTML, CSS, and JavaScript. Allows users to start, stop, and reset time tracking with hours, minutes, seconds display. Focuses on simplicity, responsive design, and smooth real-time interaction across devices.",
+  //   imageUrl: Watch,
+  //   liveLink: "https://coderhimanshu07.github.io/stopwatch/",
+  //   repoLink: "https://github.com/Coderhimanshu07/stopwatch",
+  // },
 
-  {
-    title: "Portfolio",
-    description:
-      "Modern, fully responsive personal portfolio website developed using HTML, CSS, JavaScript, and Bootstrap. Highlights skills, projects, and professional details with elegant layout, smooth navigation, and optimized performance across all devices.",
-    imageUrl: portfolio,
-    liveLink: "https://coderhimanshu07.github.io/Portfolio/",
-    repoLink: "https://github.com/Coderhimanshu07/Portfolio",
-  },
+  // {
+  //   title: "Portfolio",
+  //   description:
+  //     "Modern, fully responsive personal portfolio website developed using HTML, CSS, JavaScript, and Bootstrap. Highlights skills, projects, and professional details with elegant layout, smooth navigation, and optimized performance across all devices.",
+  //   imageUrl: portfolio,
+  //   liveLink: "https://coderhimanshu07.github.io/Portfolio/",
+  //   repoLink: "https://github.com/Coderhimanshu07/Portfolio",
+  // },
 
-  {
-    title: "Birthday Page",
-    description:
-      "Responsive birthday page created using HTML, CSS, and JavaScript. Features interactive and creative surprise website designed for memorable special moments. Includes unlocking experience, personalized messages, and engaging visuals for celebrations.",
-    imageUrl: Birthday,
-    liveLink: "https://coderhimanshu07.github.io/Birthday-surprise/",
-    repoLink: "https://github.com/Coderhimanshu07/Birthday-surprise",
-  },
+  // {
+  //   title: "Birthday Page",
+  //   description:
+  //     "Responsive birthday page created using HTML, CSS, and JavaScript. Features interactive and creative surprise website designed for memorable special moments. Includes unlocking experience, personalized messages, and engaging visuals for celebrations.",
+  //   imageUrl: Birthday,
+  //   liveLink: "https://coderhimanshu07.github.io/Birthday-surprise/",
+  //   repoLink: "https://github.com/Coderhimanshu07/Birthday-surprise",
+  // },
 
 ];
 

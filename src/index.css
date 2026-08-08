@@ -253,7 +253,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   justify-content: center;
-  gap: 12px;
+  gap: 2px;
 }
 
 /* Project section */
@@ -352,18 +352,64 @@
 
 }
 
-/* services ke icons ke liy */
-@media (max-width: 768px) {
-  .skills-grid {
-    grid-template-columns: repeat(3, 1fr);
-    /* Mobile: 3 per row */
-  }
+/* Technical section grid */
+.skills-grid-sub {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  gap: 8px;
 }
 
-/* Technical section grid */
-@media(min-width: 992px) {
-  .skills-grid {
-    grid-template-columns: repeat(6, 1fr);
+.skills-cat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0px 60px;
+  justify-content: center;
+  justify-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skills-cat-grid>div {
+  width: 90%;
+}
+
+.other-techs-wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 200px;
+  margin: 0 auto;
+  gap: 0px 60px;
+  justify-items: center;
+}
+
+/* Mobile: tighter spacing & equal-sized skill boxes */
+@media (max-width: 768px) {
+  .skills-grid-sub {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    justify-items: stretch;
+  }
+
+  .skill-box {
+    width: 100% !important;
+    padding: 0.25rem !important;
+  }
+
+  .skill-box p {
+    margin-top: 2px !important;
+    font-size: 10px;
+  }
+
+  .skills-cat-grid {
+    /* gap: 6px; */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    /* gap: 0px 60px; */
+    justify-content: center;
+    justify-items: center;
+    /* max-width: 100px; */
+    /* margin: 0 auto; */
   }
 }
 

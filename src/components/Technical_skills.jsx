@@ -1,10 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import { FaWindows, FaAws, FaCloud, FaJava, FaTerminal } from "react-icons/fa";
-import manus from "../assets/manus.png";
+import { FaAws, FaCloud, FaDatabase, FaJava, FaTerminal } from "react-icons/fa";
 import python from "../assets/py-logo.png";
 import antigravity from "../assets/antigravity.png";
+import Payu from "../assets/payu.png";
+import pinelabs from "../assets/pineLabs.png";
+import cashfree from "../assets/cashfree.png";
 
 import {
   SiHtml5,
@@ -25,21 +27,19 @@ import {
   SiPhp,
   SiRedux,
   SiLinux,
-  SiVirtualbox,
   SiApache,
-  SiCanva,
   SiMysql,
   SiOpenai,
   SiGooglegemini,
   SiPerplexity,
-  SiFlutter,
   SiNextdotjs,
   SiClaude,
   SiGithubcopilot,
   SiGooglecloud,
   SiRazorpay,
   SiVite,
-  SiStripe
+  SiStripe,
+  SiPaypal
 } from "react-icons/si";
 
 const AntigravityIcon = ({ size = 38 }) => (
@@ -67,74 +67,117 @@ const GoogleCloudIcon = ({ size = 45 }) => (
   </svg>
 );
 
+const skillBox = (skill, index) => (
+  <motion.div
+    key={index}
+    className="d-flex justify-content-center"
+    variants={{
+      hidden: { opacity: 0, y: 40 },
+      visible: { opacity: 1, y: 0 },
+    }}
+    transition={{ duration: 0.4 }}
+    whileHover={{ scale: 1.08 }}
+  >
+    <div
+      className="skill-box bg-dark p-2 text-center rounded border border-warning"
+      style={{ width: "105px" }}
+    >
+      <div style={{ fontSize: "35px", lineHeight: "1" }}>{skill.icon}</div>
+      <p className="mt-1 mb-0" style={{ fontSize: "11px" }}>{skill.name}</p>
+    </div>
+  </motion.div>
+);
+
+const skillGroup = (title, skills) => (
+  <div>
+    <h4 className="text-warning fw-bold mb-2 pt-1">{title}</h4>
+    <motion.div
+      className="skills-grid-sub mx-auto"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={{
+        hidden: {},
+        visible: {
+          transition: { staggerChildren: 0.05 },
+        },
+      }}
+    >
+      {skills.map((skill, index) => skillBox(skill, index))}
+    </motion.div>
+  </div>
+);
+
 const TechnicalSkills = () => {
-  const skills = [
-    // Languages
+  const languages = [
     { name: "HTML", icon: <SiHtml5 size={38} color="#E34F26" /> },
     { name: "CSS", icon: <SiCss3 size={38} color="#1572B6" /> },
     { name: "JavaScript", icon: <SiJavascript size={38} color="#F7DF1E" /> },
     { name: "PHP", icon: <SiPhp size={38} color="#777BB4" /> },
-    {
-      name: "Python",
-      icon: (
-        <img
-          src={python}
-          alt="Python"
-          className="img-fluid"
-          style={{ width: "38px", height: "38px", objectFit: "contain" }}
-        />
-      )
-    },
-    { name: "C ", icon: <SiC size={38} color="#A8B9CC" /> },
-    { name: "C++", icon: <SiCplusplus size={38} color="#00599C" /> },
+    { name: "Python", icon: <img src={python} alt="Python" className="img-fluid" style={{ width: "38px", height: "38px", objectFit: "contain" }} /> },
+    // { name: "C", icon: <SiC size={38} color="#A8B9CC" /> },
+    // { name: "C++", icon: <SiCplusplus size={38} color="#00599C" /> },
     { name: "Java", icon: <FaJava size={38} color="#F89820" /> },
+  ];
 
-    // Frontend Frameworks
+  const frameworks = [
     { name: "Bootstrap", icon: <SiBootstrap size={38} color="#7952B3" /> },
     { name: "Tailwind", icon: <SiTailwindcss size={38} color="#06B6D4" /> },
-    { name: "jQuery", icon: <SiJquery size={38} color="#0769AD" /> },
+    // { name: "jQuery", icon: <SiJquery size={38} color="#0769AD" /> },
     { name: "React.js", icon: <SiReact size={38} color="#61DAFB" /> },
     { name: "Next.js", icon: <SiNextdotjs size={38} /> },
     { name: "Redux", icon: <SiRedux size={38} color="#764ABC" /> },
-    { name: "Vite", icon: <SiVite size={38} color="#646CFF" /> },
+    // { name: "Vite", icon: <SiVite size={38} color="#646CFF" /> },
+    { name: "Express.js", icon: <SiExpress size={38} color="#ffffff" /> },
+  ];
 
-    // Backend
+  const backend = [
     { name: "Node.js", icon: <SiNodedotjs size={38} color="#339933" /> },
     { name: "Apache", icon: <SiApache size={38} color="#D22128" /> },
     { name: "MongoDB", icon: <SiMongodb size={38} color="#47A248" /> },
     { name: "MySQL", icon: <SiMysql size={38} color="#4479A1" /> },
     { name: "Supabase", icon: <SupabaseIcon size={38} /> },
+    { name: "NoSQL", icon: <FaDatabase size={38} color="#68A063" /> },
+  ];
 
-    // Backend Frameworks
-    { name: "Express.js", icon: <SiExpress size={38} color="#ffffff" /> },
-
-    // Payment Gateways
-    { name: "Razorpay", icon: <SiRazorpay size={38} color="#3395FF" /> },
-    { name: "Stripe", icon: <SiStripe size={38} color="#635BFF" /> },
-
-    // Cloud & DevOps
-    { name: "AWS", icon: <FaAws size={38} color="#FF9900" /> },
-    { name: "SaaS", icon: <FaCloud size={38} color="#0D6EFD" /> },
-    { name: "G Cloud", icon: <GoogleCloudIcon size={38} /> },
-    { name: "Git", icon: <SiGit size={45} color="#F05032" /> },
-    { name: "GitHub", icon: <SiGithub size={38} color="#ffffff" /> },
-    { name: "Linux", icon: <SiLinux size={38} color="#FCC624" /> },
-
-    // AI Tools
+  const aiSkills = [
     { name: "ChatGPT", icon: <SiOpenai size={38} color="#10A37F" /> },
     { name: "Gemini", icon: <SiGooglegemini size={38} color="#4285F4" /> },
-    { name: "Perplexity", icon: <SiPerplexity size={38} color="#FFF" /> },
+    // { name: "Perplexity", icon: <SiPerplexity size={38} color="#FFF" /> },
     { name: "Claude", icon: <SiClaude size={38} color="#D97757" /> },
     { name: "Copilot", icon: <SiGithubcopilot size={38} color="#ffffff" /> },
     { name: "OpenCode", icon: <FaTerminal size={38} color="#00C853" /> },
     { name: "Antigravity", icon: <AntigravityIcon size={30} /> },
   ];
 
+  const paymentGateways = [
+    { name: "Razorpay", icon: <SiRazorpay size={38} color="#3395FF" /> },
+    { name: "Stripe", icon: <SiStripe size={38} color="#635BFF" /> },
+    { name: "PayPal", icon: <SiPaypal size={38} color="#00457C" /> },
+    { name: "PayU", icon: <img src={Payu} alt="PayU" className="img-fluid" style={{ width: "38px", height: "38px", objectFit: "contain" }} /> },
+    { name: "Pine Labs", icon: <img src={pinelabs} alt="Pine Labs" className="img-fluid" style={{ width: "38px", height: "38px", objectFit: "contain" }} /> },
+    { name: "Cashfree", icon: <img src={cashfree} alt="Cashfree" className="img-fluid" style={{ width: "38px", height: "38px", objectFit: "contain" }} /> },
+    // { name: "AWS", icon: <FaAws size={38} color="#FF9900" /> },
+    // { name: "SaaS", icon: <FaCloud size={38} color="#0D6EFD" /> },
+    // { name: "G Cloud", icon: <GoogleCloudIcon size={38} /> },
+    // { name: "Git", icon: <SiGit size={40} color="#F05032" /> },
+    // { name: "GitHub", icon: <SiGithub size={38} color="#ffffff" /> },
+    // { name: "Linux", icon: <SiLinux size={38} color="#FCC624" /> },
+
+  ];
+
+  const cloudPlatforms = [
+    { name: "AWS", icon: <FaAws size={38} color="#FF9900" /> },
+    { name: "G Cloud", icon: <GoogleCloudIcon size={38} /> },
+    { name: "Linux", icon: <SiLinux size={38} color="#fff" /> },
+    { name: "SaaS", icon: <FaCloud size={38} color="#0D6EFD" /> },
+    { name: "Git", icon: <SiGit size={40} color="#F05032" /> },
+    { name: "GitHub", icon: <SiGithub size={38} color="#ffffff" /> },
+  ];
+
   return (
     <section id="skills" className="text-white">
       <div className="container pb-4">
-
-        {/* SECTION HEADING */}
         <motion.h2
           className="text-black py-4 text-center Headings"
           initial={{ opacity: 0, y: 30 }}
@@ -145,43 +188,14 @@ const TechnicalSkills = () => {
           Technical Skills
         </motion.h2>
 
-        {/* SKILLS GRID */}
-        <motion.div
-          className="skills-grid container_icons mx-auto"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={{
-            hidden: {},
-            visible: {
-              transition: {
-                staggerChildren: 0.05,
-              },
-            },
-          }}
-        >
-          {skills.map((skill, index) => (
-            <motion.div
-              key={index}
-              className="d-flex justify-content-center"
-              variants={{
-                hidden: { opacity: 0, y: 40 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={{ duration: 0.4 }}
-              whileHover={{ scale: 1.08 }}
-            >
-              <div
-                className="skill-box bg-dark p-1 text-center rounded border border-warning"
-                style={{ width: "100px" }}
-              >
-                <div style={{ fontSize: "35px", lineHeight: "1" }}>{skill.icon}</div>
-                <p className="mt-1 mb-0" style={{ fontSize: "11px" }}>{skill.name}</p>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-
+        <div className="skills-cat-grid text-center">
+          <div>{skillGroup("Languages", languages)}</div>
+          <div>{skillGroup("Frameworks", frameworks)}</div>
+          <div>{skillGroup("Backend", backend)}</div>
+          <div>{skillGroup("AI Tools & Skills", aiSkills)}</div>
+          <div>{skillGroup("Payment Gateways", paymentGateways)}</div>
+          <div>{skillGroup("Cloud & DevOps", cloudPlatforms)}</div>
+        </div>
       </div>
     </section>
   );
